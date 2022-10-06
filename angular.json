@@ -162,6 +162,14 @@
             }
           },
           "defaultConfiguration": "production"
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/SoftSolutions/browser",
+            "netlifyToken": "McMaXjtn1Y2dEsxmyCfizf5cU7z-1lubfFEZDr30M3c",
+            "siteId": ""
+          }
         }
       }
     }

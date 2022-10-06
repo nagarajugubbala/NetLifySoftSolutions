@@ -26,6 +26,7 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/platform-server": "^14.2.0",
     "@angular/router": "^14.1.0",
+    "@netlify-builder/deploy": "^5.0.0",
     "@ng-web-apis/common": "^2.0.1",
     "@ng-web-apis/universal": "^2.0.0",
     "@nguniversal/express-engine": "^14.1.0",
