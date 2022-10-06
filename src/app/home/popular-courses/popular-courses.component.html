@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="20px grid">
+    <div class="popular-courses" fxFlex="28%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let course of courses" fxLayoutAlign="center center">
+        <mat-card (click)="openDialog()" fxLayout="row" fxLayoutAlign="space-between">
+            <h3>{{course.name}}</h3>
+            <mat-card-footer class="footer_right">
+                <img style="width:28px;height:28px;" src="{{course.img}}">
+            </mat-card-footer>
+        </mat-card>
+    </div>
+</div>

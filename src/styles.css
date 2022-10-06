@@ -1,0 +1,746 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root .mat-drawer-content {
+    overflow: hidden !important;
+}
+
+.top-nav-spacer {
+    flex: 1 1 auto;
+}
+
+.p-4 {
+    padding: 4px;
+}
+
+.p-8 {
+    padding: 8px;
+}
+
+.p-12 {
+    padding: 12px;
+}
+
+.pr-40 {
+    padding-right: 40px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.mr-12 {
+    margin-right: 12px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mr-24 {
+    margin-right: 24px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-24 {
+    margin-bottom: 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.height-20 {
+    height: 20px;
+}
+
+.height-40 {
+    height: 40px;
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-24 {
+    font-size: 24px;
+}
+
+.text-28 {
+    font-size: 28px;
+}
+
+.text-36 {
+    font-size: 36px;
+}
+
+.text-48 {
+    font-size: 48px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-bolder {
+    font-weight: bolder;
+}
+
+.text-grey {
+    color: #333;
+}
+
+.text-blue {
+    color: #337ab7;
+}
+
+.text-dark-blue {
+    color: #3f51b5
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-light-blue {
+    background-color: rgb(243, 250, 250);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.swiper-image {
+    width: 100%;
+    height: 30%;
+}
+
+.example-card {
+    color: #023e8f;
+    max-width: 300px;
+    background: linear-gradient(180deg, white 0%, #05ad4d 400%);
+    transition: transform 200ms;
+}
+
+.example-card mat-icon {
+    color: #05ad4d;
+}
+
+.example-card:hover {
+    transform: scale(1.02);
+}
+
+.mat-card>:last-child:not(.mat-card-footer) {
+    text-align: center;
+}
+
+.mat-cards {
+    position: relative;
+    top: -60px;
+    z-index: 2;
+}
+
+.mat-cards .mat-card {
+    /* background-color: rgb(217, 223, 235); */
+    box-shadow: 0px 0px 0px 0px #777, 0 0 2px 0.2px #777;
+    /* background-image: url('../../SoftSolutions/src/assets/images/matbg.gif'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 12px;
+    margin-bottom: 4vh;
+}
+
+.mat-cards .mat-card:hover {
+    cursor: pointer;
+}
+
+.mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.mat-toolbar-row {
+    margin-bottom: 1px;
+}
+
+.mat-toolbar-row a {
+    color: #023e8f;
+}
+
+.mat-toolbar-row .mat-icon-button {
+    color: #023e8f;
+}
+
+.mat-toolbar-row .mat-menu-button {
+    color: #023e8f;
+}
+
+:root .swiper-button-prev:after,
+:root .swiper-button-next:after {
+    font-size: 12px;
+}
+
+.swiper-wrapper {
+    margin-top: 9vh;
+    box-sizing: border-box;
+}
+
+.line-clamp {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+
+.footer_right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.title-large {
+    margin-top: 10vh;
+    height: 8vh;
+    color: white;
+    background-color: #337ab7;
+    padding-top: 12px;
+}
+
+
+
+.border-image {
+    border-image: linear-gradient(to bottom, #337ab7 50%, #82e3f3 10%) 3;
+    border-image-source: linear-gradient(rgb(51, 122, 183) 50%, rgb(130, 227, 243) 10%);
+    border-image-slice: 3;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+}
+
+
+
+.mat-card-bg {
+    position: absolute;
+    bottom: 0;
+}
+
+.mat-card-img {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    visibility: visible;
+    transition: transform 400ms, opacity 400ms;
+}
+
+/* .mat-card-heading {
+    font-size: 20px;
+    color: #2196F3;
+    padding: 32px 24px 0px 24px;
+    margin-bottom: 0px;
+} */
+
+.mat-card-paragraph {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size: 12px;
+    display: none;
+}
+
+.mat-card:hover .mat-card-paragraph {
+    display: block;
+    color: white;
+}
+
+.mat-card:hover .mat-card-img {
+    transform: scale(0.2);
+    opacity: 0;
+}
+
+.career-placement-support .mat-card:hover {
+    display: block;
+    background-color: #337ab7;
+}
+
+@font-face {
+    font-family: "Penna";
+    src: local("Penna"), url(./assets/fonts/penna/penna.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "ProzaRegular";
+    src: local("ProzaRegular"), url(./assets/fonts/ProzaRegular/Proza-Regular.otf) format("truetype");
+}
+
+@font-face {
+    font-family: "DancingScript";
+    src: local("DancingScript"), url(./assets/fonts/DancingScript/DancingScript.ttf) format("truetype");
+}
+
+/* course indetail */
+
+.course-in-detail {
+    min-height: 90vh;
+    margin-top: 10vh;
+    padding: 40px;
+}
+
+.course-in-detail .back-arrow {
+    color: black;
+}
+
+.course-in-detail .back-arrow:hover {
+    color: #3f51b5;
+}
+
+.course-in-detail p {
+    text-align: justify;
+    line-height: 2;
+}
+
+.course-in-detail .career-steps {
+    min-width: 40vw;
+    border-radius: 10px;
+    padding: 24px;
+}
+
+.course-in-detail mat-chip {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.course-in-detail .career-bg {
+    width: 100px;
+    height: 100px;
+}
+
+.course-in-detail .tools-logo {
+    height: 60px;
+}
+
+/* Benifits */
+.benifits-main .benifits {
+    margin-bottom: 40px;
+}
+
+.benifits-main .benifits1 {
+    min-width: 30vh;
+    min-height: 60vh;
+    background-color: #0071b0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    line-height: 3;
+}
+
+.benifits-main .benifits2 {
+    min-width: 30vh;
+    min-height: 60vh;
+    background-color: #00a8e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    line-height: 3;
+}
+
+.benifits-main h4 {
+    line-height: 2.5;
+}
+
+/* career placement support */
+.career-placement-support .mat-card-heading {
+    font-size: 20px;
+    color: #0238ef;
+    padding: 32px 32px 8px 32px;
+    margin-bottom: 0px;
+}
+
+.career-placement-support .mat-raised-button {
+    text-decoration: underline;
+}
+
+.career-placement-support {
+    padding: 0px 40px 0px;
+    margin-bottom: 0px;
+}
+
+.career-placement-support .header {
+    font-size: 31px;
+    font-weight: 700;
+    color: rgb(32, 32, 32);
+}
+
+.career-placement-support .mat-card {
+    min-height: 60vh;
+    max-height: 70vh;
+    /* width: 45vh; */
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.career-placement-support .mat-card:hover {
+    cursor: pointer;
+}
+
+/* Popular Courses */
+.popular-courses .mat-raised-button {
+    text-decoration: underline;
+}
+
+/* .popular-courses {
+    margin-bottom: 10vh;
+} */
+
+.popular-courses h3 {
+    color: #0238ef;
+    font-weight: 500;
+}
+
+.popular-courses mat-card {
+    min-width: 320px;
+    max-width: 360px;
+    border-radius: 0;
+    border-left: 4px solid #0238ef;
+    transition: transform 200ms;
+}
+
+.popular-courses mat-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* home */
+.home-main .child-routing {
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.home-main a.active {
+    color: #0238ef;
+}
+
+/* all courses  */
+.all-courses {
+    padding: 24px 40px 40px;
+}
+
+.all-courses .mat-card {
+    min-width: 20vw;
+    /* max-width: 20vw; */
+    min-height: 45vh;
+    /* max-height: 45vh; */
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: transform 200ms;
+}
+
+.all-courses .mat-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.all-courses .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 1),
+        0 1px 1px 0 rgba(0, 0, 0, 1),
+        0 1px 3px 0 rgba(0, 0, 0, 1);
+}
+
+.all-courses .course-bg {
+    /* width: 100%; */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    min-height: 25vh;
+    max-height: 25vh;
+}
+
+.all-courses .limit {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.all-courses .mat-card>:last-child:not(.mat-card-footer) {
+    text-align: start;
+}
+
+
+/* about-us */
+.about-us {
+    min-height: 82vh;
+    padding: 20px 40px 20px 40px;
+    color: #444444;
+    font-size: 16px;
+    text-align: justify;
+    line-height: 1.9;
+}
+
+.about-us p {
+    line-height: 2.4;
+}
+
+
+/* toolbar */
+.toolbar-main .router-link-active {
+    color: white;
+    /* background: #3C91E6; */
+    /* background: #023e8f; */
+    background: linear-gradient(rgb(44, 119, 218), #023e8f);
+    /* background: #05ad4d; */
+    text-decoration: none;
+}
+
+.toolbar-main .logo-font {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+@keyframes animate {
+    to {
+        background-position: 400%;
+    }
+}
+
+
+/* classroom training */
+.classroom-training table {
+    width: 100%;
+}
+
+.classroom-training .search .mat-form-field {
+    font-size: 12px;
+    width: 30%;
+}
+
+.classroom-training td,
+.classroom-training th {
+    max-width: 10vw;
+    color: darkslategrey;
+}
+
+.classroom-training th {
+    background-color: #d9edf7;
+}
+
+.classroom-training th:hover {
+    background-color: #93d6f8;
+}
+
+.classroom-training th.mat-header-cell {
+    padding: 12px;
+}
+
+.classroom-training td.mat-cell {
+    padding: 12px;
+}
+
+.classroom-training {
+    width: 80%;
+    height: 90vh;
+    margin-top: 10vh;
+    padding: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.classroom-training .mat-raised-button {
+    padding: 0 16px;
+    height: 36px;
+}
+
+.classroom-training td a {
+    color: #DD413E;
+    font-weight: 500;
+}
+
+
+/* online-training */
+.online-training table {
+    width: 100%;
+}
+
+.online-training .search .mat-form-field {
+    font-size: 12px;
+    width: 30%;
+}
+
+.online-training td,
+.online-training th {
+    max-width: 10vw;
+    color: darkslategrey;
+
+}
+
+.online-training {
+    width: 80%;
+    height: 90vh;
+    margin-top: 10vh;
+    padding: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.online-training .mat-raised-button {
+    padding: 0 16px;
+    height: 36px;
+}
+
+.online-training td a {
+    color: #DD413E;
+    font-weight: 500;
+}
+
+/* services */
+.services {
+    min-height: 82vh;
+}
+
+.services .training {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 40px;
+}
+
+.services .training-logo {
+    width: 8vh;
+    height: 8vh;
+}
+
+.services .training .mat-card {
+    min-width: 20vw;
+    min-height: 22vh;
+    transition: transform 200ms;
+    padding: 12px;
+    background: linear-gradient(180deg, white 0%, #05ad4d 400%);
+}
+
+.services .training .mat-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.services p {
+    text-align: justify;
+    line-height: 2;
+    color: #444444;
+
+}
+
+
+.login .text-center {
+    text-align: center;
+}
+
+.login mat-card {
+    border-radius: 10px;
+    padding: 16px;
+    background: linear-gradient(135deg, #F6EBE6 0%, #AEE1F9 100%);
+}
+
+.signup mat-card {
+    border-radius: 10px;
+    padding: 16px;
+    background: linear-gradient(135deg, #F6EBE6 0%, #AEE1F9 100%);
+}
+
+.login .example-container {
+    height: 50%;
+    width: 20%;
+    text-align: left;
+}
+
+.login .d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .mat-form-field {
+    width: 100%;
+}
+
+.login .mt-top {
+    margin-top: 30px;
+}
+
+.login .mt-top-2 {
+    margin-top: 10px;
+}

@@ -1,0 +1,307 @@
+<!-- <div class="title-large" fxLayout="row" fxLayoutAlign="center center">
+    <h1>Contact Us</h1>
+</div>
+<div class="contact-background" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="40px">
+    <div class="contact-form">
+        <mat-card >
+            <h3 class="matcard-bg">Drop Us a Message</h3>
+            <mat-card-content>
+                <form class="formGroup" [formGroup]="form" (ngSubmit)="getDetails(form.value)" fxFlexFill
+                    fxLayout="column">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Name" maxlength="15" inputmode="tel" formControlName="name"
+                            #nameInput>
+                        <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+                        <mat-error>Name is required</mat-error>
+                        <mat-error *ngIf="form.controls['name'].errors?.['minlength']">
+                            Please enter more than 10 character
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email Id</mat-label>
+                        <input matInput placeholder="Email Id" formControlName="email">
+                        <mat-icon matSuffix>mail_outline</mat-icon>
+                        <mat-error *ngIf="form.controls['email'].errors?.['required']">Email ID is required</mat-error>
+                        <mat-error *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid email
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" hintLabel="Course required">
+                        <mat-label>Course</mat-label>
+                        <mat-select placeholder="Select" formControlName="course">
+                            <mat-option value="datascience">Data Science</mat-option>
+                            <mat-option value="digital_marketing">Digital Marketing</mat-option>
+                            <mat-option value="dotnet">Dot Net</mat-option>
+                            <mat-option value="full_stack">Full Stack</mat-option>
+                            <mat-option value="java">Java</mat-option>
+                            <mat-option value="python">Python</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mobile</mat-label>
+                        <input matInput placeholder="Mobile" formControlName="phone">
+
+                        <mat-icon matSuffix>phone</mat-icon>
+                        <mat-error *ngIf="form.controls['phone'].errors?.['required']">Mobile Number is required
+                        </mat-error>
+                        <mat-error *ngIf="form.controls['phone'].errors?.['pattern']">Please enter valid mobile number
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Message</mat-label>
+                        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="10" matInput
+                            placeholder="Message" formControlName="message"></textarea>
+                    </mat-form-field>
+                    <div fxLayoutAlign="center center">
+                        <button style="width: 30%; background-color: #e36159;" mat-raised-button color="primary" type="submit">Contact Us</button>
+                    </div>
+
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="40px">
+        <div class="contact-address">
+            <mat-card class="text-dark-blue">
+                <div fxLayout="row" fxLayoutGap="8px">
+                    <mat-icon>mail_out</mat-icon>
+                    <span>Info@softsolutions.com</span>
+                </div>
+                <div fxLayout="row" fxLayoutGap="8px">
+                    <mat-icon>phone</mat-icon>
+                    <span>+91 9123456789</span>
+                </div>
+                <div fxLayout="row" fxLayoutGap="8px">
+                    <mat-icon>wifi_protected_setup</mat-icon>
+                    <span>www.softsolutions.com</span>
+                </div>
+            </mat-card>
+        </div>
+        <div class="contact-maps">
+            <iframe
+                src="https://maps.google.com/maps?q=Talent+Smart+Soft+Solutions/@17.4241219,78.4074658,15z&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="contact-body">
+    <div fxLayout="row wrap" fxLayoutGap="28px grid" fxLayoutAlign="space-evenly center">
+        <div fxFlex="28%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card class="custom">
+                <div class="contact-bg" style="background-image: src;" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="16px"
+                    style="padding: 80px;">
+                    <div fxLayout="row" fxLayoutGap="16px">
+                        <div>
+                            <mat-icon class="material-icons-outlined" style="margin-top: 4px;">mail_out</mat-icon>
+                        </div>
+                        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+                            <h2>Support</h2>
+                            <span style="color: #999999;">info@agsoftsolutions.com</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="16px">
+                        <div>
+                            <mat-icon class="material-icons-outlined" style="margin-top: 4px;">phone</mat-icon>
+                        </div>
+                        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+                            <h2>Call</h2>
+                            <span style="color: #999999;">+91 6300573733</span>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="16px">
+                        <div>
+                            <mat-icon class="material-icons-outlined" style="margin-top: 4px;">wifi_protected_setup
+                            </mat-icon>
+                        </div>
+                        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="8px">
+                            <h2>Connect</h2>
+                            <span style="color: #999999;">www.agsoftsolutions.com</span>
+                        </div>
+
+                    </div>
+                    <div class="social-media-icons" fxLayout="row" fxLayoutGap="16px">
+                        <a href="https://www.facebook.com/agsoftsolutionss" target="_blank"><i class="fa fa-facebook-square fa-3x"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
+                        <a href="#"><i class="fa fa-youtube-square fa-3x"></i></a>
+                        <a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="form" fxFlex="32%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card class="custom-form">
+                <h3 class="text-center"><span class="text-dark-blue text-bold text-20">Contact Us!</span></h3>
+                <form class="formGroup" [formGroup]="form" (ngSubmit)="getDetails(form.value)" fxFlexFill
+                    fxLayout="column">
+                    <mat-form-field>
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Name" maxlength="15" inputmode="tel" formControlName="name"
+                            #nameInput>
+                        <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+                        <mat-error>Name is required</mat-error>
+                        <mat-error *ngIf="form.controls['name'].errors?.['minlength']">
+                            Please enter more than 10 character
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Email Id</mat-label>
+                        <input matInput placeholder="Email Id" formControlName="email">
+                        <mat-icon matSuffix>mail_outline</mat-icon>
+                        <mat-error *ngIf="form.controls['email'].errors?.['required']">Email ID is required</mat-error>
+                        <mat-error *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid email
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field hintLabel="Course required">
+                        <mat-label>Course</mat-label>
+                        <mat-select placeholder="Select" formControlName="course">
+                            <mat-option value="datascience">Data Science</mat-option>
+                            <mat-option value="digital_marketing">Digital Marketing</mat-option>
+                            <mat-option value="dotnet">Dot Net</mat-option>
+                            <mat-option value="full_stack">Full Stack</mat-option>
+                            <mat-option value="java">Java</mat-option>
+                            <mat-option value="python">Python</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Mobile</mat-label>
+                        <input matInput placeholder="Mobile" formControlName="phone">
+                        <mat-icon matSuffix>phone</mat-icon>
+                        <mat-error *ngIf="form.controls['phone'].errors?.['required']">Mobile Number is required
+                        </mat-error>
+                        <mat-error *ngIf="form.controls['phone'].errors?.['pattern']">Please enter valid mobile number
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field style="padding-bottom: 0;">
+                        <mat-label>Message</mat-label>
+                        <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="10" matInput
+                            placeholder="Message" formControlName="message"></textarea>
+                    </mat-form-field>
+                    <div fxLayoutAlign="center center">
+                        <button class="submit-button" style="width: 30%;" mat-raised-button color="primary"
+                            type="submit">Contact Us</button>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <div fxFlex="32%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card class="custom-maps">
+                <iframe style="width: 100%; height:100%; border-radius: 10px;"
+                    src="https://maps.google.com/maps?q=104,+eSeva+Ln,+KPHB+Phase+III,+K+P+H+B+Phase+3,+Kukatpally,+Hyderabad,+Telangana+500072,+India/@17.488021,78.3937425&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="section-header" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="24px">
+    <p>Contact Us</p>
+    <span>And we would love to show you our Ridiculous Commitment to Learning.</span> 
+</div>
+<div fxLayout="column">
+    <div>
+        <iframe style="width: 100%; height:68vh; padding-bottom: 32px;"
+            src="https://maps.google.com/maps?q=Talent+Smart+Soft+Solutions/@17.4241219,78.4074658,15z&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <div fxLayout="row wrap" style="padding: 12px 40px 40px 40px;" fxLayoutAlign="center">
+        <div fxFlex="30" class="contact-bg" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="16px"
+            style="padding: 80px;">
+            <div fxLayout="row" fxLayoutGap="16px">
+                <div>
+                    <mat-icon class="material-icons-outlined" style="margin-top: 4px;">mail_out</mat-icon>
+                </div>
+                <div fxLayout="column" fxLayoutGap="8px">
+                    <h2>Support</h2>
+                    <span style="color: #999999;">Info@softsolutions.com</span>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="16px">
+                <div>
+                    <mat-icon class="material-icons-outlined" style="margin-top: 4px;">phone</mat-icon>
+                </div>
+                <div fxLayout="column" fxLayoutGap="8px">
+                    <h2>Call</h2>
+                    <span style="color: #999999;">+91 9123456789</span>
+                </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="16px">
+                <div>
+                    <mat-icon class="material-icons-outlined" style="margin-top: 4px;">wifi_protected_setup</mat-icon>
+                </div>
+                <div fxLayout="column" fxLayoutGap="8px">
+                    <h2>Connect</h2>
+                    <span style="color: #999999;">www.softsolutions.com</span>
+                </div>
+
+            </div>
+        </div>
+        <div fxFlex="50" class="form">
+            <h3 class="text-center"><span class="text-dark-blue text-bold text-28"
+                    style="font-family: DancingScript;">Get in Touch!</span></h3>
+            <form class="formGroup" [formGroup]="form" (ngSubmit)="getDetails(form.value)" fxFlexFill fxLayout="column">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" maxlength="15" inputmode="tel" formControlName="name" #nameInput>
+                    <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+                    <mat-error>Name is required</mat-error>
+                    <mat-error *ngIf="form.controls['name'].errors?.['minlength']">
+                        Please enter more than 10 character
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Email Id</mat-label>
+                    <input matInput placeholder="Email Id" formControlName="email">
+                    <mat-icon matSuffix>mail_outline</mat-icon>
+                    <mat-error *ngIf="form.controls['email'].errors?.['required']">Email ID is required</mat-error>
+                    <mat-error *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid email
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field hintLabel="Course required">
+                    <mat-label>Course</mat-label>
+                    <mat-select placeholder="Select" formControlName="course">
+                        <mat-option value="datascience">Data Science</mat-option>
+                        <mat-option value="digital_marketing">Digital Marketing</mat-option>
+                        <mat-option value="dotnet">Dot Net</mat-option>
+                        <mat-option value="full_stack">Full Stack</mat-option>
+                        <mat-option value="java">Java</mat-option>
+                        <mat-option value="python">Python</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Mobile</mat-label>
+                    <input matInput placeholder="Mobile" formControlName="phone">
+                    <mat-icon matSuffix>phone</mat-icon>
+                    <mat-error *ngIf="form.controls['phone'].errors?.['required']">Mobile Number is required
+                    </mat-error>
+                    <mat-error *ngIf="form.controls['phone'].errors?.['pattern']">Please enter valid mobile number
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Message</mat-label>
+                    <textarea cdkTextareaAutosize cdkAutosizeMinRows="2" cdkAutosizeMaxRows="10" matInput
+                        placeholder="Message" formControlName="message"></textarea>
+                </mat-form-field>
+                <div fxLayoutAlign="center center">
+                    <button class="submit-button" style="width: 30%;" mat-raised-button color="primary"
+                        type="submit">Contact Us</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+<app-footer></app-footer>
+<app-scroll-to-top></app-scroll-to-top>

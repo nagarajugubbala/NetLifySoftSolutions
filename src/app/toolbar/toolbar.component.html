@@ -1,0 +1,77 @@
+<div class="toolbar-main" fxFlexFill>
+    <mat-toolbar class="mat-elevation-z2">
+        <!-- <mat-toolbar-row class="height-40 text-12 pr-40 mat-elevation-z8" fxLayoutAlign="end center" fxLayoutGap="20px">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+            <mat-icon>mail_out</mat-icon>
+            <span>Info@softsolutions.com</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="4px">
+            <mat-icon>phone</mat-icon>
+            <span>+91 9123456789</span>
+        </div>
+    </mat-toolbar-row> -->
+        <mat-toolbar-row class="bg-white">
+            <div fxShow="true" fxHide.gt-sm="true">
+                <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </div>
+            <!-- <a routerLink="/home" style="text-decoration: none;"><span class="logo-font multicolortext text-28">Soft
+                    Solutions</span></a> -->
+            <a routerLink="/home/career-placement" style="text-decoration: none;"><img style="height:58px; padding-left:20px;"
+                    src="assets/images/AGlogoanim.gif"></a>
+            <span class="top-nav-spacer"></span>
+            <div fxShow="true" fxHide.lt-md="true">
+                <a mat-button routerLink="/home/career-placement" routerLinkActive="router-link-active"> Home </a>
+                <a mat-button routerLink="/all-courses" routerLinkActive="router-link-active"> All Courses </a>
+                <a mat-button routerLink="/services" routerLinkActive="router-link-active"> Services </a>
+                <a mat-button routerLink="/about-us" routerLinkActive="router-link-active"> About Us </a>
+                <a mat-button routerLink="/contact" routerLinkActive="router-link-active"> Contact Us </a>
+
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <a mat-menu-item routerLink="/profile" routerLinkActive="router-link-active" *ngIf="isSignedIn">
+                        User
+                        Profile </a>
+                    <a mat-menu-item routerLink="/login" routerLinkActive="router-link-active" *ngIf="!isSignedIn">
+                        Login </a>
+                    <a mat-menu-item routerLink="/contact-list" routerLinkActive="router-link-active"
+                        *ngIf="isSignedIn"> Contacts </a>
+                    <!-- <a mat-menu-item routerLink="/register" routerLinkActive="router-link-active"> Signup </a> -->
+                    <a mat-menu-item (click)="signOut()" *ngIf="isSignedIn"> Logout </a>
+                </mat-menu>
+            </div>
+
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-sidenav-container>
+        <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+            <div fxLayout="column" fxLayoutAlign="center center" class="sidenav-container">
+                <a mat-button routerLink="/home" routerLinkActive="router-link-active"> Home </a>
+                <a mat-button routerLink="/all-courses" routerLinkActive="router-link-active"> All Courses </a>
+                <a mat-button routerLink="/services" routerLinkActive="router-link-active"> Services </a>
+                <a mat-button routerLink="/about-us" routerLinkActive="router-link-active"> About Us </a>
+                <a mat-button routerLink="/contact" routerLinkActive="router-link-active"> Contact Us </a>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <a mat-menu-item routerLink="/profile" routerLinkActive="router-link-active" *ngIf="isSignedIn">
+                        User
+                        Profile </a>
+                    <a mat-menu-item routerLink="/login" routerLinkActive="router-link-active" *ngIf="!isSignedIn">
+                        Login </a>
+                    <a mat-menu-item routerLink="/contact-list" routerLinkActive="router-link-active"
+                        *ngIf="isSignedIn"> Contacts </a>
+                    <!-- <a mat-menu-item routerLink="/register" routerLinkActive="router-link-active"> Signup </a> -->
+                    <a mat-menu-item (click)="signOut()" *ngIf="isSignedIn"> Logout </a>
+                </mat-menu>
+            </div>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

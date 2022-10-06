@@ -1,0 +1,64 @@
+<div class="large-footer text-white" fxLayout="row wrap" fxLayoutAlign="space-around" fxLayoutGap="40px">
+    <div>
+        <h2>Other Information</h2>
+        <ul>
+            <li><a>About Us</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Job Oriented Courses</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Job fairs, Placement Drives</a></li>
+            <li><a>Online training</a></li>
+            <li><a>Corporate training</a></li>
+            <li><a>Students Placements</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>Online Marketing Services</h2>
+        <ul>
+            <li><a>SEO Services India</a></li>
+            <li><a>PPC Google Adwords Company</a></li>
+            <li><a>Social Media Marketing Training</a></li>
+            <li><a>Online Reputation Management</a></li>
+            <li><a>Logo Design Courses</a></li>
+            <li><a>Web Developement Company india</a></li>
+        </ul>
+    </div>
+    <div>
+        <h2>News Letter</h2>
+        <form fxLayout="column" class="formGroup" [formGroup]="form" (ngSubmit)="getDetails(form.value)">
+            <mat-form-field class="subscribe" appearance="outline">
+                <input style="color: black;" type="text" placeholder="Enter Email Id" matInput formControlName="email">
+                <mat-error *ngIf="form.controls['email'].errors?.['required']">Email ID is required</mat-error>
+                <mat-error *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid email
+                </mat-error>
+            </mat-form-field>
+            <button mat-stroked-button type="submit">Subscribe!</button>
+        </form>
+    </div>
+    <div fxLayout="column" fxLayoutGap="12px">
+        <h2>Contact</h2>
+        <div class="text-blue" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+            <mat-icon>mail_out</mat-icon>
+            <span>Info@agsoftsolutions.com</span>
+        </div>
+        <div class="text-blue" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px">
+            <mat-icon>phone</mat-icon>
+            <span>+91 6300573733</span>
+        </div>
+        <div class="social-media-icons" fxLayout="row" fxLayoutGap="16px">
+            <a href="https://www.facebook.com/agsoftsolutionss" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
+            <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
+            <a href="#"><i class="fa fa-youtube-square fa-2x"></i></a>
+            <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        </div>
+        <p>Address: <br>AG Soft Solutions,<br> #104, First Floor, <br>
+            Manjeera Trinity Corporate, eSeva Lane, <br>
+            K P H B Phase 3, Kukatpally, <br>
+            Hyderabad - 500072.
+        </p>
+    </div>
+
+</div>
+<div class="footer" fxLayout="row" fxLayoutAlign="center center">
+    <footer>AG Soft Solutions &copy; Copyright 2022</footer>
+</div>

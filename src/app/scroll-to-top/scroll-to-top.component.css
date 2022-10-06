@@ -1,0 +1,20 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    z-index: 10;
+    background-color: rgb(161, 160, 161);
+    border-radius: 5px;
+}
+
+.scroll-to-top .mat-button {
+    min-width: 36px;
+    padding: 0px;
+}
+
+.show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}

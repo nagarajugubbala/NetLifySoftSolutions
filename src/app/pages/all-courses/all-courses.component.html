@@ -1,0 +1,110 @@
+<div class="title-large" fxLayout="row" fxLayoutAlign="center center">
+    <h1>All Courses</h1>
+</div>
+<div class="all-courses">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="24px grid">
+        <div fxFlex="24%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let course of courses;"
+            fxLayoutAlign="center center">
+            <mat-card [routerLink]="['/all-courses', course.courseID]" fxLayout="column">
+                <img class="course-bg" src="{{course.img_background}}">
+                <div class="p-12">
+                    <h3>
+                        <p class="text-bolder">{{course.name}}</p>
+                    </h3>
+                    <p class="limit"><span class="text-bold">Skills you'll
+                            gain:</span><span> {{course.skills_covered}}</span>
+                    </p>
+                </div>
+            </mat-card>
+        </div>
+
+        <!-- <mat-card [routerLink]="['/all-courses', 'data.id']" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/jf.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Java Fullstack</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> Java Script, Spring,
+                        Spring boot, Hibernate, MySql, Html, CSS, Bootstrap,
+                    </span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/pf.jpg">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Python Fullstack</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> Python, Django, Flask, Html,
+                        CSS, Java Script,
+                        Bootstrap </span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/df.jpg">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">.Net Fullstack</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> ASP.Net, C#, SQL Server, Html,
+                        CSS, Java Script,
+                        Bootstrap </span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/devops.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Devops</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> CI, CD, Jenkins, Gradle,
+                        Maven, Artifactory, Sqitch, Test-Driven Development</span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/aws-devops.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">AWS Devops</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> CI, CD, Micro Services, AWS
+                        Clous, Monitoring and Logging, Test Automation, Storage</span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/ds.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Data Science</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> Machine Learning, Python
+                        Programming, Jupyter notebooks, Rstudio, Data
+                        Analysis, Pandas, Numpy, Ipython, Probability And Statistics, Regression Analysis, Data
+                        Visualization (DataViz)</span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/ml.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Machine Learning</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> Decision Tree, Artificial
+                        Neural Network, Logistic regression, Linear Regression, Gradient Descent, Supervised
+                        Learning</span></p>
+            </div>
+        </mat-card>
+        <mat-card (click)="openDialog()" fxLayout="column">
+            <img class="course-bg" src="assets/images/courses/salesforce.png">
+            <div class="p-12">
+                <h3>
+                    <p class="text-bolder">Salesforce</p>
+                </h3>
+                <p class="limit"><span class="text-bold">Skills you'll gain:</span><span> Apex, Visual Force, SOQL,
+                        SOSL, Governer Limits, APIs and Integrations, Deployment Process</span></p>
+            </div>
+        </mat-card> -->
+    </div>
+</div>
+<app-footer></app-footer>
+<app-scroll-to-top></app-scroll-to-top>

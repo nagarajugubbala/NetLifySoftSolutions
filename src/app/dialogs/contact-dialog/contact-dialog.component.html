@@ -1,0 +1,43 @@
+<div fxLayout="row" class="dialog-headline" fxLayoutAlign="space-between center">
+    <h3 style="margin-bottom: 0px;" mat-dialog-title>For more info, Contact Us</h3>
+    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+</div>
+
+<mat-dialog-content>
+    <form class="formGroup" [formGroup]="form" (ngSubmit)="save(form.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" maxlength="15" inputmode="tel" formControlName="name" #nameInput>
+            <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+            <mat-error>Name is required</mat-error>
+            <mat-error *ngIf="form.controls['name'].errors?.['minlength']">
+                Please enter more than 10 character
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-icon matSuffix>mail_outline</mat-icon>
+            <mat-error *ngIf="form.controls['email'].errors?.['required']">Email ID is required</mat-error>
+            <mat-error *ngIf="form.controls['email'].errors?.['pattern']">Please enter valid email
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="Phone" formControlName="phone">
+            <mat-icon matSuffix>phone</mat-icon>
+            <mat-error *ngIf="form.controls['phone'].errors?.['required']">Mobile Number is required
+            </mat-error>
+            <mat-error *ngIf="form.controls['phone'].errors?.['pattern']">Please enter valid mobile number
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description(Requirement)</mat-label>
+            <textarea matInput placeholder="Requirement" formControlName="message"></textarea>
+        </mat-form-field>
+        <div mat-dialog-actions fxLayoutAlign="space-between start">
+            <button color="warn" mat-raised-button (click)="close()">Cancel</button>
+            <button class="submit" mat-raised-button type="submit" cdkFocusInitial>Submit</button>
+        </div>
+    </form>
+</mat-dialog-content>

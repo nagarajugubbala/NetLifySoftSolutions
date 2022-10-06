@@ -1,0 +1,60 @@
+<div class="home-main" style="background-color: rgb(247, 247, 247);">
+    <swiper [config]="config" *ngIf="isBrowser">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="swiper-image" src="assets/images/courses/jfs.gif"></div>
+            <div class="swiper-slide"><img class="swiper-image" src="assets/images/courses/dotnetfs.gif"></div>
+            <div class="swiper-slide"><img class="swiper-image" src="assets/images/courses/pythonfs.gif"></div>
+            <div class="swiper-slide"><img class="swiper-image" src="assets/images/courses/awsdevops.gif"></div>
+            <div class="swiper-slide"><img class="swiper-image" src="assets/images/courses/st.gif"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </swiper>
+    <div class="mat-cards" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="12px grid">
+        <div fxFlex="22%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card (click)="openDialog()" class="example-card" fxLayout="column" fxLayoutAlign="space-around center"
+                fxLayoutGap="12px">
+                <mat-icon>library_books</mat-icon>
+                <h1>CLASSROOM TRAINING</h1>
+                <p>Quality Training by Experts of various Technologies to suit aspirants.</p>
+            </mat-card>
+        </div>
+        <div fxFlex="22%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card (click)="openDialog()" class="example-card" fxLayout="column" fxLayoutAlign="space-around center"
+                fxLayoutGap="12px">
+                <mat-icon>group</mat-icon>
+                <h1>ONLINE TRAINING</h1>
+                <p>Quality Training by Experts of various Technologies to suit aspirants.</p>
+            </mat-card>
+        </div>
+        <div fxFlex="22%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+            <mat-card (click)="openDialog()" class="example-card" fxLayout="column" fxLayoutAlign="space-around center"
+                fxLayoutGap="12px">
+                <mat-icon> table_chart</mat-icon>
+                <h1>CORPORATE TRAINING</h1>
+                <p #popular>Quality Training by Experts of various Technologies to suit aspirants.</p>
+            </mat-card>
+        </div>
+    </div>
+
+    <div (click)="scroll(popular)" fxLayout="row wrap" fxLayoutAlign="center center">
+        <a mat-button style="text-decoration: underline;" routerLink="/home/career-placement"
+            [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+            <h4>Career Placement &
+                Support</h4>
+        </a>
+        <a mat-button style="text-decoration: underline;" routerLink="/home/popular-courses"
+            [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+            <h4>Popular Courses</h4>
+        </a>
+        <a mat-button style="text-decoration: underline;" routerLink="/home/benifits"
+            [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+            <h4>Benifits</h4>
+        </a>
+    </div>
+    <div class="child-routing">
+        <router-outlet></router-outlet>
+    </div>
+    <app-footer></app-footer>
+    <app-scroll-to-top></app-scroll-to-top>
+</div>

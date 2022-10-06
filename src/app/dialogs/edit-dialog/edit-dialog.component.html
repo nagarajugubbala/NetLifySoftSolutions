@@ -1,0 +1,60 @@
+<div fxLayout="row" class="dialog-headline" fxLayoutAlign="space-between center">
+    <h3 style="margin-bottom: 0px;" mat-dialog-title>Update Course</h3>
+    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+</div>
+
+<mat-dialog-content class="add-course">
+    <form class="formGroup" [formGroup]="form" (ngSubmit)="update(form.value)">
+        <mat-form-field style="margin-top: 4px;" appearance="outline">
+            <mat-label>Course</mat-label>
+            <input matInput placeholder="Course" inputmode="tel" formControlName="course" #nameInput [(ngModel)]="data.course">
+            <mat-error>Course is required</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Trainer</mat-label>
+            <mat-select formControlName="trainer_name" [(ngModel)]="data.trainer_name">
+                <mat-option>Clear</mat-option>
+                <mat-option *ngFor="let trainer of trainers" [value]="trainer">{{trainer}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutGap="12px">
+            <mat-form-field appearance="outline">
+                <mat-label>Choose a date</mat-label>
+                <input matInput formControlName="date" [matDatepicker]="picker" [(ngModel)]="data.date">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Time</mat-label>
+                <mat-select formControlName="time" [(ngModel)]="data.time">
+                    <mat-option>Clear</mat-option>
+                    <mat-option *ngFor="let time of times" [value]="time">{{time}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Duration (in days)</mat-label>
+            <input matInput placeholder="Duration in days" formControlName="duration" [(ngModel)]="data.duration">
+            <mat-error>Duration is required</mat-error>
+        </mat-form-field>
+
+        <div fxLayout="row" fxLayoutGap="12px">
+            <mat-form-field appearance="outline">
+                <mat-label>Actual Price (in Rupees)</mat-label>
+                <input matInput placeholder="Actual Price" formControlName="actual_price" [(ngModel)]="data.actual_price">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Offer Price (in Rupees)</mat-label>
+                <input matInput placeholder="Offer Price" formControlName="offer_price" [(ngModel)]="data.offer_price">
+            </mat-form-field>
+        </div>
+
+        <div mat-dialog-actions fxLayoutAlign="space-between start">
+            <button color="warn" mat-raised-button (click)="close()">Cancel</button>
+            <button class="submit" mat-raised-button type="submit" cdkFocusInitial>Update Course</button>
+        </div>
+    </form>
+</mat-dialog-content>

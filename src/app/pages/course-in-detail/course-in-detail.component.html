@@ -1,0 +1,109 @@
+<div class="course-in-detail" fxLayout="row wrap">
+    <div fxLayout="column">
+        <div fxLayout="row">
+            <div fxFlex="5" style="text-align: left;">
+                <a class="back-arrow" (click)="onBack()">
+                    <mat-icon>arrow_back</mat-icon>
+                </a>
+            </div>
+            <div fxFlex="95" fxLayoutAlign="center">
+                <h1 class="text-blue"><strong>{{course.name}} Training</strong></h1>
+            </div>
+        </div>
+
+        <div class="mb-20">
+            <h2><strong>Description</strong></h2>
+            <p>{{ course.paragraph1}}</p>
+            <p>{{ course.paragraph2}}</p>
+            <p>{{ course.paragraph3}}</p>
+        </div>
+        <h2><strong> Cirriculum to Launch Your Tech Career</strong></h2>
+        <div fxLayout="row wrap" fxLayoutGap="20px grid" fxLayoutAlign="center center">
+            <div fxFlex="44%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+                <mat-card class="career-steps">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div fxLayout="column" fxLayoutAlign="space-around start">
+                            <mat-chip>STEP 1</mat-chip><br>
+                            <h2 style="text-align: left;"><span class="text-bold text-grey">Developer Foundations</span></h2>
+                            <span class="text-grey">2 Months</span>
+                        </div>
+                        <div>
+                            <img class="career-bg"
+                                src="assets/images/course-indetail/javaFullstack/Developer+Foundations.svg">
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div fxFlex="44%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+                <mat-card class="career-steps">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div fxLayout="column" fxLayoutAlign="space-around start">
+                            <mat-chip>STEP 2</mat-chip><br>
+                            <h2 style="text-align: left;"><span class="text-bold text-grey">{{course.specialization}} Specialization and Mock
+                                    Tests</span></h2>
+                            <span class="text-grey">2.5 Months</span>
+                        </div>
+                        <div>
+                            <img class="career-bg"
+                                src="assets/images/course-indetail/javaFullstack/Full_Stack_Specialization.svg">
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div fxFlex="44%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+                <mat-card class="career-steps">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div fxLayout="column" fxLayoutAlign="space-around start">
+                            <mat-chip>STEP 3</mat-chip><br>
+                            <h2 style="text-align: left;"><span class="text-bold text-grey">Interview Preparation</span>
+                            </h2>
+                            <span class="text-grey">2 Months</span>
+                        </div>
+                        <div>
+                            <img class="career-bg"
+                                src="assets/images/course-indetail/javaFullstack/Capstone_Projects.svg">
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+            <div fxFlex="44%" fxFlex.xs="100%" fxFlex.sm="33%" fxLayoutAlign="center center">
+                <mat-card class="career-steps">
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div fxLayout="column" fxLayoutAlign="space-around start">
+                            <mat-chip>STEP 4</mat-chip><br>
+                            <h2 style="text-align: left;"><span class="text-bold text-grey">Get a Job with our Placement Support</span></h2>
+                            <span class="text-grey">6 Months</span>
+                        </div>
+                        <div>
+                            <img class="career-bg"
+                                src="assets/images/course-indetail/javaFullstack/Placement_Support.svg">
+                        </div>
+                    </div>
+                </mat-card>
+            </div>
+
+
+        </div>
+        <div class="mt-24 mb-24" *ngIf="course.skills_covered">
+            <h2><strong>Programming Languages and Tools Covered</strong></h2>
+            <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="16px grid">
+                <img class="tools-logo" src="{{course.tool1}}">
+                <img class="tools-logo" src="{{course.tool2}}">
+                <img class="tools-logo" src="{{course.tool3}}">
+                <img class="tools-logo" src="{{course.tool4}}">
+                <img class="tools-logo" src="{{course.tool5}}">
+                <img class="tools-logo" src="{{course.tool6}}">
+                <img class="tools-logo" src="{{course.tool7}}">
+                <img class="tools-logo" src="{{course.tool8}}">
+                <img class="tools-logo" src="{{course.tool9}}">
+                <img class="tools-logo" src="{{course.tool10}}">
+            </div>
+        </div>
+        <div class="mt-24" fxLayoutAlign="center">
+            <a class="book-demo" mat-raised-button color="primary" (click)="openDialog()"> Book a Demo Class! </a>
+        </div>
+    </div>
+
+</div>
+<app-footer></app-footer>
+<app-scroll-to-top></app-scroll-to-top>

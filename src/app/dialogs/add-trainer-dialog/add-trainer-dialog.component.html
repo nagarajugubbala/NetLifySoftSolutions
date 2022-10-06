@@ -1,0 +1,34 @@
+<div fxLayout="row" class="dialog-headline" fxLayoutAlign="space-between center">
+    <h3 style="margin-bottom: 0px;" mat-dialog-title>Add Trainer</h3>
+    <mat-icon class="close-icon" (click)="close()">close</mat-icon>
+</div>
+
+<mat-dialog-content>
+    <form class="formGroup" [formGroup]="form" (ngSubmit)="save(form.value)">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" maxlength="15" inputmode="tel" formControlName="name" #nameInput>
+            <mat-hint>Mini character 10: {{ nameInput.value.length }}/10</mat-hint>
+            <mat-error>Name is required</mat-error>
+            <mat-error *ngIf="form.controls['name'].errors?.['minlength']">
+                Please enter more than 10 character
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Skills</mat-label>
+            <mat-select formControlName="skills" multiple>
+                <!-- <mat-select-trigger>
+                    {{skills.value?.[0] || ''}}
+                    <span *ngIf="(skills.value?.length || 0) > 1" class="example-additional-selection">
+                        (+{{(skills.value?.length || 0) - 1}} {{skills.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                </mat-select-trigger> -->
+                <mat-option *ngFor="let skill of skillList" [value]="skill">{{skill}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div mat-dialog-actions fxLayoutAlign="space-between start">
+            <button color="warn" mat-raised-button (click)="close()">Cancel</button>
+            <button class="submit" mat-raised-button type="submit" cdkFocusInitial>Add Trainer</button>
+        </div>
+    </form>
+</mat-dialog-content>

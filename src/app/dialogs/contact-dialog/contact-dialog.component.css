@@ -1,0 +1,69 @@
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-stroked-button {
+    width: 40%;
+}
+
+.mat-raised-button {
+    width: 40%;
+}
+
+.mat-raised-button:hover {
+    background: red;
+}
+
+.submit {
+    background: linear-gradient(to right, #3f51b5, #362d6f);
+    animation: animate 5s linear infinite;
+    color: white;
+    transition: transform 200ms;
+}
+
+.submit:hover {
+    background: #0421c9;
+}
+
+.close-icon {
+    transition: transform 200ms;
+}
+
+.close-icon:hover {
+    transform: rotate(90deg);
+}
+
+@keyframes animate {
+    to {
+        background-position: 400%;
+    }
+}
+
+.dialog-headline {
+    color: white;
+    /* background-color: #3f51b5; */
+    background: linear-gradient(to right, #3f51b5, #362d6f);
+    margin-top: -1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+}
+
+.dialog-headline .mat-icon {
+    cursor: pointer;
+}
+
+.mat-dialog-actions {
+    padding-bottom: 24px;
+}
+
+textarea {
+    height: 48px;
+}
+
+.mat-dialog-actions {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
