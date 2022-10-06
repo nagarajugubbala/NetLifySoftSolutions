@@ -107,7 +107,7 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/SoftSolutions/server",
+            "outputPath": "dist/NetLifySoftSolutions/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
